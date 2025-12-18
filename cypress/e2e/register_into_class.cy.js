@@ -4,10 +4,10 @@ describe('template spec', () => {
     // perform login
     cy.visit('https://wodbuster.com/account/login.aspx');
     const user = Cypress.env('USERNAME')
-    cy.get('#body_body_IoEmail').type(user);
+    cy.get('#body_body_CtlLogin_IoEmail').type(user);
     const pass = Cypress.env('PASSWORD')
-    cy.get('#body_body_IoPassword').type(pass);
-    cy.get('#body_body_CtlAceptar').click();
+    cy.get('#body_body_CtlLogin_IoPassword').type(pass);
+    cy.get('#body_body_CtlLogin_CtlAceptar').click();
 
     // go to athlete reservations
     const host = Cypress.env('HOST')
